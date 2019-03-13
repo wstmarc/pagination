@@ -17,8 +17,4 @@ public class Student {
     private int percentage;
     private int phone;
     private String email;
-
-    public long getId() {
-        return this.id;
-    }
 }
