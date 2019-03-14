@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>TEST</title>
+    <link href="css/style.css" rel="stylesheet" /><!-- CSS PAGINATION PLUGIN JQUERY -->
     <style>
+        /* CSS TABLE - student listing */
         table {
             font-family: arial, sans-serif;
             border-collapse: collapse;
@@ -21,9 +23,10 @@
             color: white;
             background: #fe7777;
         }
+        /* FIN CSS TABLE - student listing */
 
         /* PAGINATION */
-        .center {
+/*        .center {
             text-align: center;
         }
 
@@ -47,7 +50,7 @@
             border: 1px solid #4CAF50;
         }
 
-        .pagination a:hover:not(.active) {background-color: #ddd;}
+        .pagination a:hover:not(.active) {background-color: #ddd;}*/
         /* FIN PAGINATION */
 
         /* ##################################################################### */
@@ -139,9 +142,10 @@
 </head>
 <body>
 
-<div th:utext="${'Thymeleaf HTML'}">HTML</div><!-- HTML remplacé par THYMELEAF HTML -->
+<!--<div th:utext="${'Thymeleaf HTML'}">HTML</div>--><!-- HTML remplacé par THYMELEAF HTML -->
 
-<table>
+<!-- TABLEAU STUDENTS -->
+<!--<table>
     <tr>
         <th>ID</th>
         <th>Name</th>
@@ -159,37 +163,124 @@
         <td th:text="${student.percentage}">50</td>
     </tr>
 </table>
-<br/>
+<br/>-->
+<!-- FIN TABLEAU STUDENTS -->
 
 <!-- PAGINATION 0 -->
-<div class="center">
+<!--<div class="center">
     <div class="pagination">
-        <a href="#">&laquo;</a><!-- TODO: REMPLACER PAR UNE IMAGE -->
+        <a href="#">&laquo;</a>&lt;!&ndash; TODO: REMPLACER PAR UNE IMAGE &ndash;&gt;
         <a href="#" th:href="@{/student/test}" class="active">1</a>
-<!--        <a href="#">2</a>
+&lt;!&ndash;        <a href="#">2</a>
         <a href="#">3</a>
         <a href="#">4</a>
         <a href="#">5</a>
-        <a href="#">6</a>-->
-        <a href="#">&raquo;</a><!-- TODO: REMPLACER AUSSI PAR UNE IMAGE -->
+        <a href="#">6</a>&ndash;&gt;
+        <a href="#">&raquo;</a>&lt;!&ndash; TODO: REMPLACER AUSSI PAR UNE IMAGE &ndash;&gt;
     </div>
-</div>
+</div>-->
 <!-- FIN PAGINATION 0 -->
 
 <!-- PAGINATION -->
-<div class="inner-left preview" id="demo7">
+<!--<div class="inner-left preview" id="demo">
     <div class="data-container" style="min-height: 175px; max-height: 175px;"><ul><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li></ul></div>
-    <div class="paginationjs paginationjs-big"><div class="paginationjs-pages"><ul><li class="paginationjs-page J-paginationjs-page active" data-num="1"><a>1</a></li><li class="paginationjs-page J-paginationjs-page" data-num="2"><a href="">2</a></li><li class="paginationjs-page J-paginationjs-page" data-num="3"><a href="">3</a></li><li class="paginationjs-page J-paginationjs-page" data-num="4"><a href="">4</a></li><li class="paginationjs-page J-paginationjs-page" data-num="5"><a href="">5</a></li><li class="paginationjs-ellipsis disabled"><a>...</a></li><li class="paginationjs-page paginationjs-last J-paginationjs-page" data-num="20"><a href="">20</a></li></ul></div></div></div>
+    <div class="paginationjs paginationjs-big"><div class="paginationjs-pages"><ul><li class="paginationjs-page J-paginationjs-page active" data-num="1"><a>1</a></li><li class="paginationjs-page J-paginationjs-page" data-num="2"><a href="">2</a></li><li class="paginationjs-page J-paginationjs-page" data-num="3"><a href="">3</a></li><li class="paginationjs-page J-paginationjs-page" data-num="4"><a href="">4</a></li><li class="paginationjs-page J-paginationjs-page" data-num="5"><a href="">5</a></li><li class="paginationjs-ellipsis disabled"><a>...</a></li><li class="paginationjs-page paginationjs-last J-paginationjs-page" data-num="20"><a href="">20</a></li></ul></div></div></div>-->
 <!-- FIN PAGINATION -->
 
 <!-- PAGINATION 2 -->
 <!--<div id="pagination2"></div>-->
 <!-- FIN PAGINATION 2 -->
+
+<!-- PAGINATION PLUGIN JQUERY -->
+<div class="page">
+    <h2>Jquery Pagination Plugin, Incroyable !!!</h2>
+
+    <div class="list-of-posts">
+        <div class="post">
+            <h3>Awesome Post 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget turpis nibh. Cras nisi lacus, dictum ac auctor quis, lacinia gravida lectus. Aenean ex nisi, iaculis sed efficitur sit amet, pharetra ut diam. Aliquam sit amet ex ac leo faucibus pharetra. Ut fermentum, nulla non finibus luctus, lectus diam porttitor nisi, varius ullamcorper ipsum neque tempor nulla. Curabitur lobortis magna bibendum, lacinia lorem ut, vehicula justo. In ut ex sodales, pulvinar nisl vel, aliquet ligula. In luctus gravida purus, ac facilisis est elementum id. Curabitur iaculis ante diam, ac dignissim metus bibendum facilisis. Nunc ultricies orci in ipsum bibendum pulvinar. In euismod laoreet nisl, et consectetur arcu aliquet a.</p>
+        </div>
+        <div class="post">
+            <h3>Awesome Post 2</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget turpis nibh. Cras nisi lacus, dictum ac auctor quis, lacinia gravida lectus. Aenean ex nisi, iaculis sed efficitur sit amet, pharetra ut diam. Aliquam sit amet ex ac leo faucibus pharetra. Ut fermentum, nulla non finibus luctus, lectus diam porttitor nisi, varius ullamcorper ipsum neque tempor nulla. Curabitur lobortis magna bibendum, lacinia lorem ut, vehicula justo. In ut ex sodales, pulvinar nisl vel, aliquet ligula. In luctus gravida purus, ac facilisis est elementum id. Curabitur iaculis ante diam, ac dignissim metus bibendum facilisis. Nunc ultricies orci in ipsum bibendum pulvinar. In euismod laoreet nisl, et consectetur arcu aliquet a.</p>
+        </div>
+        <div class="post">
+            <h3>Awesome Post 3</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget turpis nibh. Cras nisi lacus, dictum ac auctor quis, lacinia gravida lectus. Aenean ex nisi, iaculis sed efficitur sit amet, pharetra ut diam. Aliquam sit amet ex ac leo faucibus pharetra. Ut fermentum, nulla non finibus luctus, lectus diam porttitor nisi, varius ullamcorper ipsum neque tempor nulla. Curabitur lobortis magna bibendum, lacinia lorem ut, vehicula justo. In ut ex sodales, pulvinar nisl vel, aliquet ligula. In luctus gravida purus, ac facilisis est elementum id. Curabitur iaculis ante diam, ac dignissim metus bibendum facilisis. Nunc ultricies orci in ipsum bibendum pulvinar. In euismod laoreet nisl, et consectetur arcu aliquet a.</p>
+        </div>
+        <div class="post">
+            <h3>Awesome Post 4</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget turpis nibh. Cras nisi lacus, dictum ac auctor quis, lacinia gravida lectus. Aenean ex nisi, iaculis sed efficitur sit amet, pharetra ut diam. Aliquam sit amet ex ac leo faucibus pharetra. Ut fermentum, nulla non finibus luctus, lectus diam porttitor nisi, varius ullamcorper ipsum neque tempor nulla. Curabitur lobortis magna bibendum, lacinia lorem ut, vehicula justo. In ut ex sodales, pulvinar nisl vel, aliquet ligula. In luctus gravida purus, ac facilisis est elementum id. Curabitur iaculis ante diam, ac dignissim metus bibendum facilisis. Nunc ultricies orci in ipsum bibendum pulvinar. In euismod laoreet nisl, et consectetur arcu aliquet a.</p>
+        </div>
+        <div class="post">
+            <h3>Awesome Post 5</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget turpis nibh. Cras nisi lacus, dictum ac auctor quis, lacinia gravida lectus. Aenean ex nisi, iaculis sed efficitur sit amet, pharetra ut diam. Aliquam sit amet ex ac leo faucibus pharetra. Ut fermentum, nulla non finibus luctus, lectus diam porttitor nisi, varius ullamcorper ipsum neque tempor nulla. Curabitur lobortis magna bibendum, lacinia lorem ut, vehicula justo. In ut ex sodales, pulvinar nisl vel, aliquet ligula. In luctus gravida purus, ac facilisis est elementum id. Curabitur iaculis ante diam, ac dignissim metus bibendum facilisis. Nunc ultricies orci in ipsum bibendum pulvinar. In euismod laoreet nisl, et consectetur arcu aliquet a.</p>
+        </div>
+        <div class="post">
+            <h3>Awesome Post 6</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget turpis nibh. Cras nisi lacus, dictum ac auctor quis, lacinia gravida lectus. Aenean ex nisi, iaculis sed efficitur sit amet, pharetra ut diam. Aliquam sit amet ex ac leo faucibus pharetra. Ut fermentum, nulla non finibus luctus, lectus diam porttitor nisi, varius ullamcorper ipsum neque tempor nulla. Curabitur lobortis magna bibendum, lacinia lorem ut, vehicula justo. In ut ex sodales, pulvinar nisl vel, aliquet ligula. In luctus gravida purus, ac facilisis est elementum id. Curabitur iaculis ante diam, ac dignissim metus bibendum facilisis. Nunc ultricies orci in ipsum bibendum pulvinar. In euismod laoreet nisl, et consectetur arcu aliquet a.</p>
+        </div>
+        <div class="post">
+            <h3>Awesome Post 7</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget turpis nibh. Cras nisi lacus, dictum ac auctor quis, lacinia gravida lectus. Aenean ex nisi, iaculis sed efficitur sit amet, pharetra ut diam. Aliquam sit amet ex ac leo faucibus pharetra. Ut fermentum, nulla non finibus luctus, lectus diam porttitor nisi, varius ullamcorper ipsum neque tempor nulla. Curabitur lobortis magna bibendum, lacinia lorem ut, vehicula justo. In ut ex sodales, pulvinar nisl vel, aliquet ligula. In luctus gravida purus, ac facilisis est elementum id. Curabitur iaculis ante diam, ac dignissim metus bibendum facilisis. Nunc ultricies orci in ipsum bibendum pulvinar. In euismod laoreet nisl, et consectetur arcu aliquet a.</p>
+        </div>
+        <div class="post">
+            <h3>Awesome Post 8</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget turpis nibh. Cras nisi lacus, dictum ac auctor quis, lacinia gravida lectus. Aenean ex nisi, iaculis sed efficitur sit amet, pharetra ut diam. Aliquam sit amet ex ac leo faucibus pharetra. Ut fermentum, nulla non finibus luctus, lectus diam porttitor nisi, varius ullamcorper ipsum neque tempor nulla. Curabitur lobortis magna bibendum, lacinia lorem ut, vehicula justo. In ut ex sodales, pulvinar nisl vel, aliquet ligula. In luctus gravida purus, ac facilisis est elementum id. Curabitur iaculis ante diam, ac dignissim metus bibendum facilisis. Nunc ultricies orci in ipsum bibendum pulvinar. In euismod laoreet nisl, et consectetur arcu aliquet a.</p>
+        </div>
+        <div class="post">
+            <h3>Awesome Post 9</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget turpis nibh. Cras nisi lacus, dictum ac auctor quis, lacinia gravida lectus. Aenean ex nisi, iaculis sed efficitur sit amet, pharetra ut diam. Aliquam sit amet ex ac leo faucibus pharetra. Ut fermentum, nulla non finibus luctus, lectus diam porttitor nisi, varius ullamcorper ipsum neque tempor nulla. Curabitur lobortis magna bibendum, lacinia lorem ut, vehicula justo. In ut ex sodales, pulvinar nisl vel, aliquet ligula. In luctus gravida purus, ac facilisis est elementum id. Curabitur iaculis ante diam, ac dignissim metus bibendum facilisis. Nunc ultricies orci in ipsum bibendum pulvinar. In euismod laoreet nisl, et consectetur arcu aliquet a.</p>
+        </div>
+        <div class="post">
+            <h3>Awesome Post 10</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget turpis nibh. Cras nisi lacus, dictum ac auctor quis, lacinia gravida lectus. Aenean ex nisi, iaculis sed efficitur sit amet, pharetra ut diam. Aliquam sit amet ex ac leo faucibus pharetra. Ut fermentum, nulla non finibus luctus, lectus diam porttitor nisi, varius ullamcorper ipsum neque tempor nulla. Curabitur lobortis magna bibendum, lacinia lorem ut, vehicula justo. In ut ex sodales, pulvinar nisl vel, aliquet ligula. In luctus gravida purus, ac facilisis est elementum id. Curabitur iaculis ante diam, ac dignissim metus bibendum facilisis. Nunc ultricies orci in ipsum bibendum pulvinar. In euismod laoreet nisl, et consectetur arcu aliquet a.</p>
+        </div>
+        <div class="post">
+            <h3>Awesome Post 11</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget turpis nibh. Cras nisi lacus, dictum ac auctor quis, lacinia gravida lectus. Aenean ex nisi, iaculis sed efficitur sit amet, pharetra ut diam. Aliquam sit amet ex ac leo faucibus pharetra. Ut fermentum, nulla non finibus luctus, lectus diam porttitor nisi, varius ullamcorper ipsum neque tempor nulla. Curabitur lobortis magna bibendum, lacinia lorem ut, vehicula justo. In ut ex sodales, pulvinar nisl vel, aliquet ligula. In luctus gravida purus, ac facilisis est elementum id. Curabitur iaculis ante diam, ac dignissim metus bibendum facilisis. Nunc ultricies orci in ipsum bibendum pulvinar. In euismod laoreet nisl, et consectetur arcu aliquet a.</p>
+        </div>
+        <div class="post">
+            <h3>Awesome Post 12</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget turpis nibh. Cras nisi lacus, dictum ac auctor quis, lacinia gravida lectus. Aenean ex nisi, iaculis sed efficitur sit amet, pharetra ut diam. Aliquam sit amet ex ac leo faucibus pharetra. Ut fermentum, nulla non finibus luctus, lectus diam porttitor nisi, varius ullamcorper ipsum neque tempor nulla. Curabitur lobortis magna bibendum, lacinia lorem ut, vehicula justo. In ut ex sodales, pulvinar nisl vel, aliquet ligula. In luctus gravida purus, ac facilisis est elementum id. Curabitur iaculis ante diam, ac dignissim metus bibendum facilisis. Nunc ultricies orci in ipsum bibendum pulvinar. In euismod laoreet nisl, et consectetur arcu aliquet a.</p>
+        </div>
+        <div class="post">
+            <h3>Awesome Post 13</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget turpis nibh. Cras nisi lacus, dictum ac auctor quis, lacinia gravida lectus. Aenean ex nisi, iaculis sed efficitur sit amet, pharetra ut diam. Aliquam sit amet ex ac leo faucibus pharetra. Ut fermentum, nulla non finibus luctus, lectus diam porttitor nisi, varius ullamcorper ipsum neque tempor nulla. Curabitur lobortis magna bibendum, lacinia lorem ut, vehicula justo. In ut ex sodales, pulvinar nisl vel, aliquet ligula. In luctus gravida purus, ac facilisis est elementum id. Curabitur iaculis ante diam, ac dignissim metus bibendum facilisis. Nunc ultricies orci in ipsum bibendum pulvinar. In euismod laoreet nisl, et consectetur arcu aliquet a.</p>
+        </div>
+        <div class="post">
+            <h3>Awesome Post 14</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget turpis nibh. Cras nisi lacus, dictum ac auctor quis, lacinia gravida lectus. Aenean ex nisi, iaculis sed efficitur sit amet, pharetra ut diam. Aliquam sit amet ex ac leo faucibus pharetra. Ut fermentum, nulla non finibus luctus, lectus diam porttitor nisi, varius ullamcorper ipsum neque tempor nulla. Curabitur lobortis magna bibendum, lacinia lorem ut, vehicula justo. In ut ex sodales, pulvinar nisl vel, aliquet ligula. In luctus gravida purus, ac facilisis est elementum id. Curabitur iaculis ante diam, ac dignissim metus bibendum facilisis. Nunc ultricies orci in ipsum bibendum pulvinar. In euismod laoreet nisl, et consectetur arcu aliquet a.</p>
+        </div>
+        <div class="post">
+            <h3>Awesome Post 15</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget turpis nibh. Cras nisi lacus, dictum ac auctor quis, lacinia gravida lectus. Aenean ex nisi, iaculis sed efficitur sit amet, pharetra ut diam. Aliquam sit amet ex ac leo faucibus pharetra. Ut fermentum, nulla non finibus luctus, lectus diam porttitor nisi, varius ullamcorper ipsum neque tempor nulla. Curabitur lobortis magna bibendum, lacinia lorem ut, vehicula justo. In ut ex sodales, pulvinar nisl vel, aliquet ligula. In luctus gravida purus, ac facilisis est elementum id. Curabitur iaculis ante diam, ac dignissim metus bibendum facilisis. Nunc ultricies orci in ipsum bibendum pulvinar. In euismod laoreet nisl, et consectetur arcu aliquet a.</p>
+        </div>
+        <div class="post">
+            <h3>Awesome Post 16</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget turpis nibh. Cras nisi lacus, dictum ac auctor quis, lacinia gravida lectus. Aenean ex nisi, iaculis sed efficitur sit amet, pharetra ut diam. Aliquam sit amet ex ac leo faucibus pharetra. Ut fermentum, nulla non finibus luctus, lectus diam porttitor nisi, varius ullamcorper ipsum neque tempor nulla. Curabitur lobortis magna bibendum, lacinia lorem ut, vehicula justo. In ut ex sodales, pulvinar nisl vel, aliquet ligula. In luctus gravida purus, ac facilisis est elementum id. Curabitur iaculis ante diam, ac dignissim metus bibendum facilisis. Nunc ultricies orci in ipsum bibendum pulvinar. In euismod laoreet nisl, et consectetur arcu aliquet a.</p>
+        </div>
+        <div class="post">
+            <h3>Awesome Post 17</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget turpis nibh. Cras nisi lacus, dictum ac auctor quis, lacinia gravida lectus. Aenean ex nisi, iaculis sed efficitur sit amet, pharetra ut diam. Aliquam sit amet ex ac leo faucibus pharetra. Ut fermentum, nulla non finibus luctus, lectus diam porttitor nisi, varius ullamcorper ipsum neque tempor nulla. Curabitur lobortis magna bibendum, lacinia lorem ut, vehicula justo. In ut ex sodales, pulvinar nisl vel, aliquet ligula. In luctus gravida purus, ac facilisis est elementum id. Curabitur iaculis ante diam, ac dignissim metus bibendum facilisis. Nunc ultricies orci in ipsum bibendum pulvinar. In euismod laoreet nisl, et consectetur arcu aliquet a.</p>
+        </div>
+    </div>
+
+    <div class="pagination">
+
+    </div>
+
+</div>
+<!-- FIN PAGINATION PLUGIN JQUERY -->
+
 </body>
+<script src="js/jquery.js"></script><!-- PAGINATION PLUGIN JQUERY -->
+<script src="js/paginate.js"></script><!-- PAGINATION PLUGIN JQUERY -->
+<script src="js/custom.js"></script><!-- PAGINATION PLUGIN JQUERY -->
 <script>
 
     /* PAGINATION */
-    $('#demo').pagination({
+/*    $('#demo').pagination({
         dataSource: [1, 2, 3, 4, 5, 6, 7, '...' , 100],
     pageSize: 5,
         showPrevious: false,
@@ -199,7 +290,7 @@
         var html = template(data);
         dataContainer.html(html);
     }
-    });
+    });*/
     /* FIN PAGINATION */
 
 

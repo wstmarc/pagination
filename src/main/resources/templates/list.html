@@ -3,26 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <title>Liste des Étudiants</title>
+    <style>
+        /* CSS TABLE - student listing */
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 2px solid grey;
+            text-align: center;
+            padding: 8px;
+            background: lightgoldenrodyellow;
+        }
+
+        th {
+            color: white;
+            background: #fe7777;
+        }
+        /* FIN CSS TABLE - student listing */
+    </style>
 </head>
 <body>
-    <div th:text="lol">OK</div>
-    <table>
-        <thead>
-            <tr>
-                <td>HEADER</td>
-            </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>BODY</td>
-        </tr>
-        </tbody>
-        <tfoot>
-            <tr>
-                <td>FOOTER</td>
-            </tr>
-        </tfoot>
-    </table>
+<div th:utext="${'Thymeleaf HTML'}">HTML</div><!-- HTML remplacé par THYMELEAF HTML -->
 
+<!-- TABLEAU STUDENTS -->
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Branch</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Percentage</th>
+    </tr>
+    <tr th:each="student : ${table}">
+        <td th:text="${student.id}">000000000</td>
+        <td th:text="${student.name}">Maria Anders</td>
+        <td th:text="${student.branch}">th</td>
+        <td th:text="${student.email}">ma@test.com</td>
+        <td th:text="${student.phone}">0123456789</td>
+        <td th:text="${student.percentage}">50</td>
+    </tr>
+</table>
+<br/>
+<!-- FIN TABLEAU STUDENTS -->
 </body>
 </html>
