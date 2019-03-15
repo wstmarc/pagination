@@ -7,5 +7,4 @@
             itemsToPaginate : ".post"
         });
     });
-
 })(jQuery)
