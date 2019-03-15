@@ -28,6 +28,6 @@ public class StudentController {
     public String test1(Model model){
         Pageable pageable = PageRequest.of(0 , 20);
         model.addAttribute("table", studentPageRepository.findAll(pageable));
-        return "test";
+        return "test2";
     }
 }
